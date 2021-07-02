@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="600.0" stylesheets="@../notepad_dark/main-gui.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad_dark.MainController">
+   <center>
+      <TextArea fx:id="textArea" prefHeight="650.0" prefWidth="600.0" promptText="Start Typing Here..." wrapText="true" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </TextArea>
+   </center>
+   <top>
+      <MenuBar id="menuBar" fx:id="menuBar" prefHeight="25.0" prefWidth="600.0" stylesheets="@../notepad_dark/main-gui.css" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openNewWindow" text="New Page" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveTextToFile" text="Save" />
+                  <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="Exit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem fx:id="cutButton" mnemonicParsing="false" onAction="#cutOnAction" text="Cut (Ctrl + x)" />
+                  <MenuItem fx:id="copyButton" mnemonicParsing="false" onAction="#copyOnAction" text="Copy (Ctrl + c)" />
+                  <MenuItem fx:id="pasteButton" mnemonicParsing="false" onAction="#pasteOnAction" text="Paste (Ctrl + v)" />
+                  <MenuItem mnemonicParsing="false" onAction="#undoOnAction" text="Undo (Ctrl + z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#redoOnAction" text="Redo (Ctrl + y)" />
+                  <MenuItem fx:id="clearButton" mnemonicParsing="false" onAction="#clearOnAction" text="Clear Page" />
+                  <MenuItem mnemonicParsing="false" onAction="#replaceOnAction" text="Replace" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Format">
+               <items>
+                  <CheckMenuItem mnemonicParsing="false" onAction="#wrapOnAction" selected="true" text="Word Wrap" />
+                  <MenuItem mnemonicParsing="false" onAction="#fontBoxOnAction" text="Font" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="View">
+               <items>
+                  <Menu mnemonicParsing="false" text="Zoom">
+                     <items>
+                        <CheckMenuItem fx:id="fiftyPercent" mnemonicParsing="false" onAction="#fiftyPercentZoom" text="50%" />
+                        <CheckMenuItem fx:id="hundredPercent" mnemonicParsing="false" onAction="#hundredPercentZoom" selected="true" text="100%" />
+                        <CheckMenuItem fx:id="hundredTwentyFivePercent" mnemonicParsing="false" onAction="#hundredTwentyFiveZoom" text="125%" />
+                        <CheckMenuItem fx:id="hundredFiftyPercent" mnemonicParsing="false" onAction="#hundredFiftyZoom" text="150%" />
+                     </items>
+                  </Menu>
+                  <CheckMenuItem mnemonicParsing="false" onAction="#setStatusBarVisible" selected="true" text="Show Status Bar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutNotepad" mnemonicParsing="false" onAction="#setOnAction" text="About Notepad Dark" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Theme">
+               <items>
+                  <RadioMenuItem fx:id="darkButton" mnemonicParsing="false" onAction="#setDarkMode" selected="true" text="Dark Theme" />
+                  <RadioMenuItem fx:id="lightButton" mnemonicParsing="false" onAction="#setLightMode" text="Light Theme" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Sticky">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#createStickyStage" text="New" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <TitledPane fx:id="statusBar" alignment="CENTER_RIGHT" collapsible="false" expanded="false" prefHeight="25.0" prefWidth="600.0" text="Windows     UTF-8" textAlignment="RIGHT" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

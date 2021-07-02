@@ -1,0 +1,6 @@
+#textArea {
+    -fx-control-inner-background: WHITE;
+    -fx-background-color: WHITE;
+    -fx-prompt-text-fill: GREY;
+    -fx-text-fill: BLACK;
+}

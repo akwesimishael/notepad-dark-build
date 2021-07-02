@@ -1,0 +1,14 @@
+.root {
+
+}
+
+#menuBar {
+
+}
+
+#textArea {
+    -fx-control-inner-background: BLACK;
+    -fx-background-color: BLACK;
+    -fx-prompt-text-fill: GREY;
+    -fx-text-fill: WHITE;
+}

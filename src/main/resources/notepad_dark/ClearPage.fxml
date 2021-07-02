@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: BLACK; -fx-border-color: WHITE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad_dark.ClearPageController">
+   <children>
+      <Label alignment="CENTER" layoutX="73.0" layoutY="37.0" prefHeight="63.0" prefWidth="254.0" text="Are You Sure You Want To Clear The Page?" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="73.0" layoutY="126.0" mnemonicParsing="false" onAction="#yesOnAction" prefHeight="33.0" prefWidth="81.0" text="Yes">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="246.0" layoutY="126.0" mnemonicParsing="false" onAction="#noOnAction" prefHeight="33.0" prefWidth="81.0" text="No">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

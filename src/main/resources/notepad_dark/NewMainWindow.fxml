@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad_dark.MainController">
+    <top>
+        <MenuBar id="menuBar" fx:id="menuBar" prefHeight="25.0" prefWidth="700.0" stylesheets="@../notepad_dark/main-gui.css" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New Page" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As" />
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Clear Page" />
+                        <MenuItem mnemonicParsing="false" text="Replace" />
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Format">
+                    <items>
+                        <CheckMenuItem mnemonicParsing="false" text="Word Wrap" />
+                        <MenuItem mnemonicParsing="false" text="Font" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Zoom">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Zoom In" />
+                                <MenuItem mnemonicParsing="false" text="Zoom Out" />
+                            </items>
+                        </Menu>
+                        <CheckMenuItem mnemonicParsing="false" text="Show Status Bar" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="aboutNotepad" mnemonicParsing="false" onAction="#setOnAction" text="About Notepad Dark" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Light" />
+                <Menu mnemonicParsing="false" text="Sticky" />
+            </menus>
+        </MenuBar>
+    </top>
+    <bottom>
+        <TitledPane alignment="CENTER_RIGHT" collapsible="false" expanded="false" prefHeight="15.0" prefWidth="600.0" text="Ln1 Col1     Windows     UTF-8" textAlignment="RIGHT" BorderPane.alignment="CENTER" />
+    </bottom>
+    <center>
+        <TextArea id="textArea" promptText="Start Typing Here..." stylesheets="@../notepad_dark/main-gui.css" wrapText="true" BorderPane.alignment="CENTER">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextArea>
+    </center>
+</BorderPane>
