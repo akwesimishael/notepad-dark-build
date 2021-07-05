@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -28,6 +29,8 @@ public class MainApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainGUI.fxml"));
         primaryStage.setTitle("Notepad Dark");
         primaryStage.setScene(new Scene(root));
+        Image icon = new Image(getClass().getResourceAsStream("/notepad_dark/notes.png"));
+        primaryStage.getIcons().add(icon);
         setRootNode(root);
         rootNode = root;
         root.getStylesheets().add(getClass().getResource("main-gui.css").toExternalForm());

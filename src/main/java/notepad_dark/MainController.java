@@ -276,7 +276,7 @@ public class MainController {
         stickyStage.setScene(new Scene(root));
         stickyStage.setTitle("Sticky Note");
         stickyStage.setResizable(false);
-        stickyStage.initStyle(StageStyle.DECORATED);
+        stickyStage.initStyle(StageStyle.UTILITY);
         stickyStage.initModality(Modality.APPLICATION_MODAL);
         stickyStage.show();
     }
